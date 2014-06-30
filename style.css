@@ -1,0 +1,165 @@
+    header {
+      text-align: center;
+      background: url('http://i.imgur.com/qBFxDN7.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-family: 'Amatic SC', cursive;
+
+    }
+
+    h1 {
+      font-size: 70px;
+      background: rgba(0,0,0,0.5);
+
+    }
+    .unique2 {
+      opacity: 0;
+      color: white;
+      font-family: 'Amatic SC', cursive;
+      font-size: 20px;
+    }
+    .unique {
+      color: rgba(255,255,255,1);
+      background: black;
+      background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+      background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+      background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+      padding: 10px;
+      line-height: 20px;
+      text-align: justify;
+      position: absolute;
+      bottom: 0;
+      margin: 0; 
+      transition: height .5s;
+      -webkit-transition: height .5s;
+      -moz-transition: height .5s;
+      color: white;
+      font-family: 'Amatic SC', cursive;
+      font-size: 25px;
+    }
+    .unique3 {
+      text-align: right;
+      padding: 0 200px 0 0 ;
+      font-size: 25px;
+      color: red;
+    }
+    .me {
+      margin: 40px -800px 0px 0px;
+      border-radius: 3px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+    }       
+    .me2 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+      border-radius: 3px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+      padding: 20px;      
+    }
+    .aboutme {
+      color: black;
+      font-family: 'Amatic SC', cursive;
+      font-size: 25px;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    /*.triangle-up2 {
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 25px solid red;
+      position: relative;
+      top: -300px;
+      left: 369px;
+    }
+    .triangle-up1 {
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 25px solid green;
+      position: relative;
+      top: -256px;
+      left: 768px;
+    }    */
+    .first{
+      max-width: 500px;
+      padding: 10px;
+      margin: 0 auto;
+      border: 7px solid green;
+      border-radius: 10px;
+    }
+    .second{
+      max-width: 500px;
+      padding: 10px;
+      margin: 0 auto;
+      border: 7px solid #F00;
+      border-radius: 10px;
+    }
+    .third {
+      max-width: 500px;
+      padding: 10px;
+      margin: 0 auto;
+      border: 7px solid blue;
+      border-radius: 10px;
+    }   
+    .fourth{
+      background-image: url("http://i.imgur.com/1KtRnCc.jpg");
+      height: 200px;
+      width: 200px;
+      position: relative;
+      margin: 40px 0 0 0;
+      border-radius: 3px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+      
+    }
+    .title {
+      font-weight: bold;
+      font-family: 'Amatic SC', cursive;
+      font-size: 30px;
+    } 
+
+    .slider {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 580px; 
+      height: 250px; 
+      position: relative;
+      overflow: hidden;
+      border: 7px solid black;
+      border-radius: 10px;
+
+    }
+
+    .slider li {
+      display: none;
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+    }    
+    .show-description p {
+      height: 150px;
+    }
+
+    .show-description small {
+          opacity: 1;
+        }
+        @media (max-width: 500px) {
+          h1 {
+            font-size: 36px;
+          }
+          .title {
+            font-size: 28px;
+          }
+          .me {
+            margin: 40px 0 0 0;
+          }
+          .me2{
+            margin: 40px 0 0 0;
+          }
+    }
