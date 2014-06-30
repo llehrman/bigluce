@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<link href="style.css" rel="stylesheet">
+<script src="/assets/jquery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link href="/normalize.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+<body>
+  <header>
+    <img class="me" src="http://i.imgur.com/Pq5nXo1.jpg">
+    <p class="unique3">Baby Lucy</p>
+    <h1>Lucy Lehrman</h1>
+  </header>
+  <div><img class="me2" src="http://i.imgur.com/td8Ljnj.jpg?1"></div>
+<div class="aboutme"><h2>About Me</h2></div>
+<div class="first">
+  <p><span class="title">ORIGIN</span><br />
+  <small>I was born and raised in Manhattan. You could say I've taken on the traits of the city...I'm a fast-paced person with tons of energy.</small></p>
+</div>
+
+<div class="second">
+  <p><span class="title">LIVE/WORK</span><br />
+  <small>I moved to San Francisco 2 years ago. I landed a job on the growth team at OrderAhead. I couldn't be happier to go to work everyday. I enjoy my job predominantly because my day-to-day tasks are always varied and always challenging. I work on data analyses, copy writing, SEO, coding, brainstorming 10x-100x ideas, and creative branding ideas.<br><br>I did not have any of the skills I needed to succeed in a role like this when I was hired, but OrderAhead believed I was tenacious. BLAH BLAH BLAH</small></p>
+</div>
+  
+<div class="third">
+  <p><span class="title">INTERESTS</span><br />
+  <small>On my free time, I am usually out exploring. I love to go hiking, camping, and snowboarding. I have an insatiable desire to travel and have been fortunate to see at least one city in every continent besides Antarctica. Being active, means I'm always hungry...so I spend the rest of my free time trying new restaurants or cooking meals for my friends and family.<br><br></small></p>
+</div>
+<ul class="slider">
+  <li>
+    <img src="http://i.imgur.com/RiP7PEB.jpg"> 
+  </li>
+  <li>
+    <img src="http://i.imgur.com/Ayzj5Sw.jpg"> 
+  <li>
+     <img src="http://i.imgur.com/eJY6X5q.jpg">
+  </li>
+</ul>
+<div class="fourth">
+  <p class="unique">Contact Info<br /><br />
+  <small class="unique2">Tel: 917.250.1703<br>Email: lucy.lehrman@gmail.com </small></p>
+</div>
+<script>
+$(document).ready(function() {
+  var $slider = $('.slider'); // class or id of carousel slider
+  var $slide = 'li';
+  var $transition_time = 1000; // 1 second
+  var $time_between_slides = 4000; // 4 seconds
+
+  function slides(){
+    return $slider.find($slide);
+  }
+
+  slides().fadeOut();
+
+  // set active classes
+  slides().first().addClass('active');
+  slides().first().fadeIn($transition_time);
+
+  // auto scroll 
+  $interval = setInterval(
+    function(){
+      var $i = $slider.find($slide + '.active').index();
+
+      slides().eq($i).removeClass('active');
+      slides().eq($i).fadeOut($transition_time);
+
+      if (slides().length == $i + 1) $i = -1; // loop to start
+
+      slides().eq($i + 1).fadeIn($transition_time);
+      slides().eq($i + 1).addClass('active');
+    }
+    , $transition_time +  $time_between_slides 
+  );
+});
+$('div').on('click', function() {
+    $(this).toggleClass('show-description');
+});
+</script>
+</body>
+    </body>
